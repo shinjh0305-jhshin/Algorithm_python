@@ -22,7 +22,7 @@ def initialize():
     for x in must_teach:
         template |= 1 << (ord(x) - ord('a'))
     tmp = 'bdefghjklmopqrsuvwxyz'
-    to_teach = list(tmp)
+    to_teach = list(map(lambda x: ord(x) - ord('a'), tmp))
 
 
 def operate():
@@ -37,7 +37,7 @@ def operate():
     for tmp in combinations(to_teach, letters - 5):
         tmp_ans = 0
         for x in tmp:
-            template |= 1 << (ord(x) - ord('a'))
+            template |= 1 << x
         for x in word:
             if x & template >= x:
                 tmp_ans += 1
