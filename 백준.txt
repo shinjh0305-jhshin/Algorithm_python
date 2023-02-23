@@ -8,6 +8,8 @@ https://www.acmicpc.net/problemset?sort=ac_desc&tier=11%2C12%2C13%2C14%2C15&algo
 https://www.acmicpc.net/problemset?sort=ac_desc&tier=8%2C9%2C10%2C11%2C12%2C13%2C14%2C15&algo=102%2C25%2C11%2C33%2C125&algo_if=or
 구현 + DP + 그래프 + 그리디 + BF | 골드
 https://www.acmicpc.net/problemset?sort=ac_desc&tier=11%2C12%2C13%2C14%2C15&algo=102%2C25%2C11%2C33%2C125&algo_if=or
+DP + 그리디 + BF + 분집 | 골드
+https://www.acmicpc.net/problemset?sort=ac_desc&tier=11%2C12%2C13%2C14%2C15&algo=25%2C33%2C125%2C81&algo_if=or
 
 
 다시 풀어보기
