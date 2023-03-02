@@ -1,19 +1,21 @@
 import sys
-input = sys.stdin.readline
-stack = []
-sz = int(input())
-rawdata = list(map(int, input().split()))
-result = [0] * sz
+from collections import deque
+Input = sys.stdin.readline
+sz = int(Input())
+k = list(map(int, Input().split()))
 
-for idx in range(sz):
-    num = rawdata[idx]
-    while stack and stack[-1][1] < num:
-        result[stack[-1][0]] = num
-        stack.pop()
-    stack.append((idx, num))
 
-while stack:
-    result[stack[-1][0]] = -1
-    stack.pop()
+def operate():
+    k.reverse()  # 맨 뒤부터 넣기 위해 뒤집는다
+    ans = []  # 정답을 저장하는 리스트
+    st = deque()  # 스택
+    for x in k:
+        while st and st[-1] <= x:
+            st.pop()
+        ans.append(-1) if not st else ans.append(st[-1])
+        st.append(x)
+    ans.reverse()
+    print(*ans)
 
-print(*result)
+
+operate()
