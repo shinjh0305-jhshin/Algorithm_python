@@ -7,9 +7,8 @@ dp = [0] * 5001
 def initialize():
     dp[0] = dp[2] = 1
 
-    for i in range(4, 11, 2):
-        for j in range(2, i + 1, 2):
-            print(j - 2, i - j)
+    for i in range(4, 5001, 2):
+        for j in range(2, i + 1):
             dp[i] += dp[j - 2] * dp[i - j]
         dp[i] %= 1000000007
 
